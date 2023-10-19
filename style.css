@@ -1,0 +1,15 @@
+body {
+    background-color: gray;
+}
+
+
+
+.title{
+    display: flexbox;
+    margin: 0 auto;
+} 
+.container{
+    display:flexbox;
+    margin: 0 auto;
+    padding: auto;
+}
