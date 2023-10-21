@@ -10,15 +10,54 @@
     <main>
         <div class = "title">
             <h1>Wheel Of Fortune</h1>
-            <img src="https://media.istockphoto.com/id/182178301/photo/win-300-points-on-a-wheel-of-fortune.jpg?s=1024x1024&w=is&k=20&c=h1WAcSr6bsNQBmXfBtSVWtZySlEMfUbjqBAF3sp3OyI=" alt="">
+            <!-- <img src="https://media.istockphoto.com/id/182178301/photo/win-300-points-on-a-wheel-of-fortune.jpg?s=1024x1024&w=is&k=20&c=h1WAcSr6bsNQBmXfBtSVWtZySlEMfUbjqBAF3sp3OyI=" alt=""> -->
         </div>
         <div class = "container">
             <!-- <p>Instructions: Spin and try to guess the word/phrase. As you spin, a random number of points will be available to recieve. If you guess a letter wrong, the available points will get deducted by 50 points. Once the available points are gone you will loose a life, as soon as all the lives are gone you lose and your score will be displayed.
             </p> -->
-            <h2>Play</h2>
-            <h2>Credits</h2>
-            <h2>Play Again</h2>
+            <ul>
+                <li>PLAY</li>
+                <li>PLAY AGAIN</li>
+                <li>CREDITS</li>
+            </ul>
+            <!-- <h2 id="play">Play</h2>
+            <h2 id="credit">Credits</h2>
+            <h2 id="restart">Play Again</h2> -->
         </div>
     </main>
+
+    <div class="container">
+        <div class="spinBtn">Spin</div>
+        <div class="wheel">
+            <div class="number" style="--i:1;--clr: pink;">
+                <span>500</span></div>
+            <div class="number" style="--i:2;--clr:blue;">
+                <span>600</span></div>
+            <div class="number" style="--i:3;--clr:red;">
+                <span>700</span></div>
+            <div class="number" style="--i:4;--clr:green;">
+                <span>800</span></div>
+            <div class="number" style="--i:5;--clr:yellow;">
+                <span>900</span></div>
+            <div class="number" style="--i:6;--clr:lightblue;">
+                <span>1000</span></div>
+            <div class="number" style="--i:7;--clr:orange;">
+                <span>Spin Again</span></div>
+            <div class="number" style="--i:8;--clr:purple;">
+                <span>Bankrupt</span></div>
+        </div>
+    </div>
+    <script>
+        let wheel = document.querySelector('.wheel');
+        let spinBtn = document.querySelector('.spinBtn');
+
+        //randomly spins the wheel with in 360 degrees
+        let value = Math.ceil(Math.random() * 3600);
+
+        spinBtn.onclick = function(){
+            wheel.style.transform = "rotate(" + value +"deg)";
+            value += Math.ceil(Math.random() * 3600);
+        }
+    </script>
 </body>
 </html>
