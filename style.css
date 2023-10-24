@@ -6,14 +6,60 @@
 }
 
 body {
-    background-color: palevioletred;
-    display: flex;
+    background-image: url("https://plus.unsplash.com/premium_photo-1676757458639-d60b4583f13d?auto=format&fit=crop&q=60&w=500&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fG1vbmV5JTIwYmFja2dyb3VuZHxlbnwwfHwwfHx8MA%3D%3D");
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: #333;
 }
 
+.container2 button{
+    text-transform: uppercase;
+    z-index: 1000;
+    border: 15px double black;
+    background-color: gray;
+    padding: 15px 15px;
+    color: white;
+    font-family: inherit;
+    font-size: 15px;
+
+}
+
+.container2 button:hover{
+    background-color: #9c8383;
+}
+
+.container2 button:active{
+    background-color: black;
+    box-shadow: 0 5px #666;
+    transform: translateY(3px);
+
+}
+
+.score {
+    display: flex;
+    text-transform: uppercase;
+    z-index: 1000;
+    background-color: transparent;
+    padding: 15px 15px;
+    color: yellow;
+    font-family: inherit;
+    font-size: 50px;
+    justify-content: center;
+}
+
+#tick {
+    color: white;
+    font-size: 100px;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 166px;
+}
+
+.wholeWheel {
+    display: flex;
+    height: 500px;
+    justify-content: flex-end;
+}
 
 .container{
     position: relative;
@@ -102,22 +148,41 @@ body {
 
 
 
-/* h1 {
-    color: yellow;
-    font-size: 80px;
+h1 {
+    color: red;
+    font-size: 100px;
     font-weight: 500;
 }
 .title{
     display: flex;
     flex-direction: column;
     align-items: center;
+   
 } 
 
-.title img {
-    width: 500px;
-    height: 480px;
+main img {
+    width: 90vw;
+    height: 70vh;
+    z-index: -11;
 }
-h2{
+
+ul {
+    list-style: none;
+    display: flex;
+    width: 100vw;
+    justify-content: space-around;
+    font-size: 50px;
+    color: yellow;
+}
+
+ul li {
+    display: flex;
+}
+
+ul li:hover{
+    background: blueviolet;
+}
+/* h2{
     display:flexbox;
     margin: 0 auto;
     padding: auto;

@@ -3,29 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">  
     <title>Document</title>
 </head>
 <body>
+    <script src="main.js"></script>
     <main>
         <div class = "title">
             <h1>Wheel Of Fortune</h1>
-            <!-- <img src="https://media.istockphoto.com/id/182178301/photo/win-300-points-on-a-wheel-of-fortune.jpg?s=1024x1024&w=is&k=20&c=h1WAcSr6bsNQBmXfBtSVWtZySlEMfUbjqBAF3sp3OyI=" alt=""> -->
-        </div>
-        <div class = "container">
-            <!-- <p>Instructions: Spin and try to guess the word/phrase. As you spin, a random number of points will be available to recieve. If you guess a letter wrong, the available points will get deducted by 50 points. Once the available points are gone you will loose a life, as soon as all the lives are gone you lose and your score will be displayed.
-            </p> -->
-            <ul>
-                <li>PLAY</li>
-                <li>PLAY AGAIN</li>
-                <li>CREDITS</li>
-            </ul>
-            <!-- <h2 id="play">Play</h2>
-            <h2 id="credit">Credits</h2>
-            <h2 id="restart">Play Again</h2> -->
-        </div>
-    </main>
 
+        </div>
+        <div class = "container2">
+            <ul>
+                <li id="solvePuzzle"><button>SOLVE PUZZLE</button></li>
+                <li id="letter"><button>GUESS A LETTER</button></li>
+                <li id="newPuzzle"><button>NEW PUZZLE</button></li>
+            </ul>
+        </div>
+        <div class="score">Points: <span id="points">0</span></div>
+        
+    </main>
+    <div id="tick">⇩</div>
+<div class="wholeWheel">
+    
     <div class="container">
         <div class="spinBtn">Spin</div>
         <div class="wheel">
@@ -47,6 +47,7 @@
                 <span>Bankrupt</span></div>
         </div>
     </div>
+</div>
     <script>
         let wheel = document.querySelector('.wheel');
         let spinBtn = document.querySelector('.spinBtn');
