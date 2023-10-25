@@ -1,3 +1,4 @@
+
 // function to have the game begin
 GAMERULES = (function () 
 {
@@ -14,7 +15,7 @@ GAMERULES = (function ()
         "NARUTO UZUMAKI",
         "NOTHING"
     ],
-    const puzzle = puzzles[Math.floor(Math.random()*8)],
+    puzzle = shuffle(puzzles),
     vowels = ['A', 'E', 'I', 'O', 'U'],
     currPoints = 0,
     guessLetter = document.getElementById('letter'),
@@ -22,9 +23,28 @@ GAMERULES = (function ()
     points = document.getElementById('points'),
     solve = document.getElementById('solvePuzzle');
 
+    shuffle = function(array)
+    {
+        let currentIndex = array.length,  randomIndex;
+
+        // While there remain elements to shuffle.
+        while (currentIndex > 0) {
+      
+          // Pick a remaining element.
+          randomIndex = Math.floor(Math.random() * currentIndex);
+          currentIndex--;
+      
+          // And swap it with the current element.
+          [array[currentIndex], array[randomIndex]] = [
+            array[randomIndex], array[currentIndex]];
+        }
+      
+        return array;
+    },
+
     return function GAME() 
     {
-        puzzle.randomize();
+        
         
 
         var currentPuzzleArray = [],
@@ -73,6 +93,9 @@ GAMERULES = (function ()
         displayArea.appendChild(clear);
         clear.className = "clear";
     },
+
+    
+
     solvePuzzle = function() 
     {
         if (!puzzleSolved && !createGuessPromt("SOLVE THE PUZZLE?", null, true)) 
@@ -139,9 +162,9 @@ GAMERULES = (function ()
         }
         else alert("No more puzzles!");
     },
-    updateMoney = function() 
+    updatePoints = function() 
     {
-        money.innerHTML = currentMoney;
+        money.innerHTML = currentPoints;
     },
     spinWheelfn = function(amt) 
     {
@@ -174,7 +197,7 @@ GAMERULES = (function ()
                 
                 default:
                     var timesFound = createGuessPromt("YOU SPUN A " + card + " PLEASE ENTER A LETTER");
-                    currentMoney += (parseInt(card) * timesFound);
+                    currentPoints += (parseInt(card) * timesFound);
                 }
 
                 updateMoney();
@@ -246,7 +269,7 @@ bindEvent(letter, "click", function()
         alert("You need more than 100 to guess");
     }
 
-    updateMoney();
+    updatePoints();
 });
 
 bindEvent(newButton, "click", nextRound);

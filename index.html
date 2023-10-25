@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">  
+    <link rel="stylesheet" href="./style.css">  
     <title>Document</title>
 </head>
 <body>
-    <script src="main.js"></script>
+    
     <main>
         <div class = "title">
             <h1>Wheel Of Fortune</h1>
@@ -23,31 +23,59 @@
         <div class="score">Points: <span id="points">0</span></div>
         
     </main>
+
+    <div class="grid">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+
     <div id="tick">⇩</div>
-<div class="wholeWheel">
-    
-    <div class="container">
-        <div class="spinBtn">Spin</div>
-        <div class="wheel">
-            <div class="number" style="--i:1;--clr: pink;">
-                <span>500</span></div>
-            <div class="number" style="--i:2;--clr:blue;">
-                <span>600</span></div>
-            <div class="number" style="--i:3;--clr:red;">
-                <span>700</span></div>
-            <div class="number" style="--i:4;--clr:green;">
-                <span>800</span></div>
-            <div class="number" style="--i:5;--clr:yellow;">
-                <span>900</span></div>
-            <div class="number" style="--i:6;--clr:lightblue;">
-                <span>1000</span></div>
-            <div class="number" style="--i:7;--clr:orange;">
-                <span>Spin Again</span></div>
-            <div class="number" style="--i:8;--clr:purple;">
-                <span>Bankrupt</span></div>
+    <div class="wholeWheel">
+        <div id="game">  </div>
+        <div class="container">
+            <div class="spinBtn">Spin</div>
+            <div class="wheel">
+                <div class="number" style="--i:1;--clr: pink;">
+                    <span>500</span>
+                </div>
+                <div class="number" style="--i:2;--clr:blue;">
+                    <span>600</span>
+                </div>
+                <div class="number" style="--i:3;--clr:red;">
+                    <span>700</span>
+                </div>
+                <div class="number" style="--i:4;--clr:green;">
+                    <span>800</span>
+                </div>
+                <div class="number" style="--i:5;--clr:yellow;">
+                    <span>900</span>
+                </div>
+                <div class="number" style="--i:6;--clr:lightblue;">
+                    <span>1000</span>
+                </div>
+                <div class="number" style="--i:7;--clr:orange;">
+                    <span>Spin Again</span>
+                </div>
+                <div class="number" style="--i:8;--clr:purple;">
+                    <span>Bankrupt</span>
+                </div>
+            </div>
         </div>
     </div>
-</div>
+
     <script>
         let wheel = document.querySelector('.wheel');
         let spinBtn = document.querySelector('.spinBtn');
@@ -60,5 +88,6 @@
             value += Math.ceil(Math.random() * 3600);
         }
     </script>
+    <script src="./index.js"></script>
 </body>
 </html>
