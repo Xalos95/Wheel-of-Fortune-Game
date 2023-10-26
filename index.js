@@ -114,7 +114,7 @@ GAMERULES = (function ()
         //find it:
         if (guess.length && !puzzleSolved)
         {
-            if ((guess in oc(vowels)) && !isVowel && !solvingPuzzle) 
+            if ((guess in oc(letter)) && !isLetter && !solvingPuzzle) 
             {
                 alert("Cannot guess a vowel right now!");
                 return false;
