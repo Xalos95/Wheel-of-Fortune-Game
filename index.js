@@ -4,6 +4,7 @@ GAMERULES = (function ()
 {
     
 
+    //the many different puzzles to have populate the scoreboard
     puzzles = 
     [
         "WITH GREAT POWER COMES GREAT RESPONSIBILTY",
@@ -23,6 +24,7 @@ GAMERULES = (function ()
     points = document.getElementById('points'),
     solve = document.getElementById('solvePuzzle');
 
+    //function to shuffle the array of puzzles
     shuffle = function(array)
     {
         let currentIndex = array.length,  randomIndex;
@@ -42,15 +44,16 @@ GAMERULES = (function ()
         return array;
     },
 
+    //the main function that will run as the game is being played
     return function GAME() 
     {
-        
-        
-
-        var currentPuzzleArray = [],
-        lettersInPuzzle = [],
+    
+        var currentPuzzleArray = [],//empty array for the current puzzle chosen
+        lettersInPuzzle = [],//make the appropriate aray size for the picked puzzle
         guessedArray = [],
-        puzzleSolved = false,
+        puzzleSolved = false,//as long as the puzzle hasn't been solved it will always be false
+
+        //function to help create the scoreboard
         createBoard = function(currentPuzzle) {
             guessedArray = [];
             lettersInPuzzle = [];
@@ -162,10 +165,13 @@ GAMERULES = (function ()
         }
         else alert("No more puzzles!");
     },
+
     updatePoints = function() 
     {
-        money.innerHTML = currentPoints;
+        points.innerHTML = currentPoints;
     },
+
+    //wheel points based on the spin
     spinWheelfn = function(amt) 
     {
         clearTimeout(spinTimeout);
