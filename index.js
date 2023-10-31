@@ -98,7 +98,7 @@ GAMERULES = (function ()
     },
 
     
-
+    //function that will check if the puzzle is correct 
     solvePuzzle = function() 
     {
         if (!puzzleSolved && !createGuessPromt("SOLVE THE PUZZLE?", null, true)) 
@@ -106,6 +106,8 @@ GAMERULES = (function ()
             alert("Puzzle NOT solved...");
         }
     },
+
+    //function that will accept a letter by the user and check if it's in the puzzle and marks the times its been correct
     guessLetter = function(guess, isVowel, solvingPuzzle) 
     {
         var timesFound = 0;
@@ -152,6 +154,8 @@ GAMERULES = (function ()
         }
         return false;
     },
+
+    //function that allows to move on to the next puzzle
     nextRound = function() 
     {
         ++round;
@@ -166,6 +170,7 @@ GAMERULES = (function ()
         else alert("No more puzzles!");
     },
 
+    //updates the points of the player as they spin and guess correctly or incorrectly
     updatePoints = function() 
     {
         points.innerHTML = currentPoints;
@@ -211,6 +216,8 @@ GAMERULES = (function ()
         }
     },
     guessTimes = 0,
+
+    //asking the player to input a letter
     createGuessPromt = function(msg, isVowel, solvingPuzzle) {
         solvingPuzzle = solvingPuzzle == undefined ? false : true;
         if (!puzzleSolved) {
@@ -252,27 +259,16 @@ GAMERULES = (function ()
         }
         return false;
     };
-    
-
-    function bindEvent(el, eventName, eventHandler) {
-    if (el.addEventListener) 
-    {
-        el.addEventListener(eventName, eventHandler, false);
-    } else if (el.attachEvent) 
-    {
-        el.attachEvent('on' + eventName, eventHandler);
-    }
-}
 
 bindEvent(letter, "click", function() 
 {
     if (currPoints > 200) 
     {
-        if (createGuessPromt("PLEASE ENTER A VOWEL", true) !== false) currentPoints -= 100;
+        if (createGuessPromt("PLEASE ENTER A VOWEL", true) !== false) currentPoints -= 200;
     }
     else 
     {
-        alert("You need more than 100 to guess");
+        alert("You need more than 200 to guess");
     }
 
     updatePoints();
