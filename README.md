@@ -24,7 +24,10 @@ bit deeper, here is a list of problems i acame across:
    not doing so,  i always had minutes wasted on finding the small code that was the problem and having to scroll a long paragraph of code tro find it. I believe the reason i do this is because I forget that it's an option
    and need all my code in one folder. I will continue to practice on this mini game to improve itself and myself in practicing the essentials.
 
-3) Help is one of my weaknesses whenim in a class and that is what prevents me from achieving what im trying to do in my code. Though google is very helpful my selfishness on asking for help on my code is not healthy and i
+3) The functions were another issue in where i belive the scope of my variables were to short or were overwritten in that the value would return null or the wrong value
+   and so the result that i need back didn't work. An example is my shuffle array function to shuffle the puzzles array and i have it return a random object in that array into another empty array. The issue was the scope in where the function call or the function itself was not declared even though the variablle aray i made was empty. Another solution could be that the constant nesting in the main game function is confusing the logic and therefore giving off values that it shouldn't return or have, breaking and adding comments into what each section does should help me determine the issue but as i kept chnaging the variables it did little to no change. 
+
+4) Help is one of my weaknesses whenim in a class and that is what prevents me from achieving what im trying to do in my code. Though google is very helpful my selfishness on asking for help on my code is not healthy and i
    struggle until the end whenever i get close to the end. The developer tools is super helpful and i tend to ignore that as well since it will allow me to see what variables are being declared or working right along the
    way. Coding this project has been difficult by myself and though i still have a lot to improve on it, it will be an eye opening experience. And cosing woth help by my peers or the developer tools should not discourage
    me from future coding whenit comes to more difficult project for companies/myslef. 
