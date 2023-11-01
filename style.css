@@ -54,6 +54,7 @@ body {
     grid-template-columns: repeat(2, auto);
     transform: rotate(90deg);
     justify-content: center;
+    background-color: white;
 }
 
 .box{
